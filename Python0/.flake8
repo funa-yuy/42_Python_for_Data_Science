@@ -1,0 +1,10 @@
+[flake8]
+# チェック対象から除外するディレクトリ
+exclude =
+    .venv,
+    venv,
+    build,
+    dist
+
+# 循環的複雑度のチェック
+max-complexity = 10
