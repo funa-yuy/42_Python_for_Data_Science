@@ -25,4 +25,5 @@ try:
     else:
         print("I'm Odd.")
 except AssertionError as e:
-    print(f"AssertionError: {e}")
+    print(f"AssertionError: {e}", file=sys.stderr)
+    sys.exit(1)
