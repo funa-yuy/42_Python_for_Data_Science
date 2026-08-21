@@ -4,4 +4,4 @@ repos:
     hooks:
       - id: flake8
         name: norminette (flake8)
-        args: ["--config", ".flake8"]
+        args: ["--config", "Python0/.flake8"]
