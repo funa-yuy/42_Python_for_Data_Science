@@ -8,3 +8,5 @@ exclude =
 
 # 循環的複雑度のチェック
 max-complexity = 10
+
+max-line-length = 90
