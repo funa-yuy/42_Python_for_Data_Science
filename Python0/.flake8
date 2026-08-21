@@ -5,7 +5,6 @@ exclude =
     venv,
     build,
     dist
-
 # 循環的複雑度のチェック
 max-complexity = 10
 
