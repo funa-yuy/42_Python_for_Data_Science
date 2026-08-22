@@ -2,7 +2,10 @@
 # yeildを学ぶ。　ついでに、pythonの三項演算子も学ぶ。
 #
 
-import shutil
+import os
+
+from time import sleep
+from tqdm import tqdm
 
 
 def ft_tqdm(lst: range) -> None:
@@ -27,7 +30,7 @@ def ft_tqdm(lst: range) -> None:
         ratio = round(num / total * 100)
 
         # ターミナルサイズをもとに、プログレスバーを作成
-        size = shutil.get_terminal_size()
+        size = os.get_terminal_size()
         columns = size[0]
         columns -= 35 + (len(str(total)) * 2)
         col_ratio = round(columns / total * num)
@@ -37,3 +40,33 @@ def ft_tqdm(lst: range) -> None:
         print(f"\r{str(ratio).rjust(3)}%|{''.join(bar)}| {num}/{total}", end="")
         yield x  # ここでxの値を保持したまま一時停止
         # ここから再開する
+
+
+def run_test(case: str, rng: range) -> None:
+    print(f"======== {case} ========")
+    for elem in ft_tqdm(rng):
+        sleep(0.005)
+    print()
+    for elem in tqdm(rng):
+        sleep(0.005)
+    print()
+
+
+def main():
+    """tests ft_tqdm
+    """
+    test_cases = [
+        ["普通 range(333)", range(333)],
+        ["始まりと終わりを指定 range(0, 1)", range(0, 1)],
+        ["途中で始まる range(10, 20)", range(10, 20)],
+        ["始まりと終わりが同じ range(20, 20)", range(20, 20)],
+        ["始まりの方が少ない 1 range(10, 20)", range(10, 20)],
+        ["始まりの方が少ない 2 range(-10, 0)", range(-10, 0)]
+    ]
+
+    for test in test_cases:
+        run_test(test[0], test[1])
+
+
+if __name__ == "__main__":
+    main()
