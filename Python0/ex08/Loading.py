@@ -43,6 +43,12 @@ def ft_tqdm(lst: range) -> None:
 
 
 def run_test(case: str, rng: range) -> None:
+    """同じ引数でft_tqdm()とtqdm()を実行するテスト用関数
+
+    Args:
+        case (str): テスト時に表示する文字列
+        rng (range): 引数で与えるrange
+    """
     print(f"======== {case} ========")
     for elem in ft_tqdm(rng):
         sleep(0.005)
