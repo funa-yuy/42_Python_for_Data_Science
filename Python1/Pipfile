@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flake8 = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+norminette = "flake8"
