@@ -222,3 +222,4 @@ __marimo__/
 mfunakos/
 *.pdf
 .DS_Store
+*archive*
