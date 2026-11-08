@@ -1,9 +1,8 @@
 #
-# lambaを使ってみる。lambda 引数: 式
+# lambaを使ってみる。(lambda 引数: 式)(引数)
 #
 
 import sys
-from ft_filter import ft_filter
 
 
 def main():
@@ -27,7 +26,7 @@ def main():
         n = int(args[2])
 
         # S に含まれる単語のうち、長さが N を超える単語のリストを出力
-        res = ft_filter(lambda word: len(word) >= n, s)
+        res = [w for w in s if (lambda word: len(word) >= n)(w)]
         print(list(res))
     except AssertionError as e:
         print(f"AssertionError: {e}", file=sys.stderr)
