@@ -1,8 +1,10 @@
 #
 # type()を知る。関数を作成してみる
 #
+from typing import Any
 
-def all_thing_is_obj(object: any) -> int:
+
+def all_thing_is_obj(object: Any) -> int:
     # your code here
     object_type = type(object)
 
