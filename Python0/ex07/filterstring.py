@@ -1,5 +1,5 @@
 #
-# lambaを使ってみる。(lambda 引数: 式)(引数)
+# 内包表記とlambaを使ってみる。(lambda 引数: 式)(引数)
 #
 
 import sys
