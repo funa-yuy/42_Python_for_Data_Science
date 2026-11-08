@@ -1,14 +1,21 @@
-ft_list = ["Hello", "tata!"]
+ft_list = ["Hello"]
 ft_tuple = ("Hello", "toto!")
-ft_set = {"Hello", "tutu!"}
+ft_set = {"Hello", "Hello", "tutu!"}
 ft_dict = {"Hello": "titi!"}
 
 # your code here
-ft_list[1] = "World!"  # string
-ft_tuple = ("Hello", "Japan!")  # tuple
-ft_set.remove("tutu!")  # set
+# list 可変性
+ft_list.append("World!")
+
+# tuple 不変性
+ft_tuple = ft_tuple[:1] + ("Japan!", )
+
+# set 順序 set型は順序を持たない仕様になっているので、出力順は不規則。
+ft_set.remove("tutu!")
 ft_set.add("Tokyo!")
-ft_dict["Hello"] = "42Tokyo!"  # dict
+
+# dict 一意性
+ft_dict["Hello"] = "42Tokyo!"
 
 print(ft_list)
 print(ft_tuple)
