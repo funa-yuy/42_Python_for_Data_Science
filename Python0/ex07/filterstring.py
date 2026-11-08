@@ -29,7 +29,7 @@ def main():
         res = [w for w in s if (lambda word: len(word) > n)(w)]
         print(list(res))
     except AssertionError as e:
-        print(f"AssertionError: {e}", file=sys.stderr)
+        print(f"AssertionError: {e}")
         sys.exit(1)
 
 

@@ -60,7 +60,7 @@ def main():
         res = [NESTED_MORSE[c] for c in args[1].upper()]
         print(" ".join(res))
     except AssertionError as e:
-        print(f"AssertionError: {e}", file=sys.stderr)
+        print(f"AssertionError: {e}")
         sys.exit(1)
 
 
