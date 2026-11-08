@@ -1,8 +1,10 @@
 #
 # nanの扱い、is と == の違いを学ぶ
 #
+from typing import Any
 
-def NULL_not_found(object: any) -> int:
+
+def NULL_not_found(object: Any) -> int:
     # your code here
     object_type = type(object)
 
