@@ -26,7 +26,7 @@ def main():
         n = int(args[2])
 
         # S に含まれる単語のうち、長さが N を超える単語のリストを出力
-        res = [w for w in s if (lambda word: len(word) >= n)(w)]
+        res = [w for w in s if (lambda word: len(word) > n)(w)]
         print(list(res))
     except AssertionError as e:
         print(f"AssertionError: {e}", file=sys.stderr)
