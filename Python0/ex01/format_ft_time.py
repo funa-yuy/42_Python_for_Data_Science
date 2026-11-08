@@ -14,7 +14,7 @@ dt = datetime.now()
 dt_sec = dt.timestamp()  # timestamp()で、1970年1月1日0時0分0秒からの経過秒週を取得
 print(
     f"Seconds since January 1, 1970: "
-    f"{dt_sec} or {dt_sec:e} in scientific notation"
+    f"{dt_sec:,.4f} or {dt_sec:.2e} in scientific notation"
     )
 
 print(f"{dt:%b %d %Y}")  # %b 英語での月(3文字での省略),  %d 日, %Y 西暦(4桁)
